@@ -67,9 +67,15 @@ function draw(){
 
     }
 
-    fill(0); //  draw eyebrows
-    rect(550, 355, 60, 10, 10);
-    rect(650, 355, 60, 10, 10);
+    fill(0); // Draw eyebrows
+    let eyebrowY = height / 2 - faceHeight / 4; // Position above eyes
+    let eyebrowXOffset = 50; // Distance from center
+    let eyebrowWidth = 60;
+    let eyebrowHeight = 10;
+
+    rect((width / 2) - eyebrowXOffset - (eyebrowWidth / 2), eyebrowY, eyebrowWidth, eyebrowHeight, 10);
+    rect((width / 2) + eyebrowXOffset - (eyebrowWidth / 2), eyebrowY, eyebrowWidth, eyebrowHeight, 10);
+
 }
 
     function keyPressed (){ // change mouth expression with spacebar
