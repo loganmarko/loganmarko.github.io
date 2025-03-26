@@ -60,7 +60,7 @@ function setup(){
 }
 
 function keyPressed(){
-    if (keyCode === ENTER){
+    if (keyCode === ENTER){ //let enter key check theanswer when clicked
         checkAnswer();
     }
 }
@@ -69,22 +69,19 @@ function draw(){
     if(bgColour !== ''){
         background(bgColour);
     }else{
-        background(240, 240, 255);
+        background(240, 240, 255); //flash the screen a different colour depending on if the answer is correct
     }
 
-    textFont(customFont);
+    textFont(customFont); //call custom font
 
     textSize(80);
     fill(0);
     textAlign(CENTER, TOP);
-    text("Question " + (currentQuestion + 1) + ":", width / 2 ,20);
-    text(questions[currentQuestion].question, width / 2 ,60);
+    text("Question " + (currentQuestion + 1) + ":", width / 2 ,20); 
+    text(questions[currentQuestion].question, width / 2 ,60); //text displaying the current question
 
-    if(resultText !== ""){
+    if(resultText !== ""){ //check if there is result text
         textSize(80);
-        if(resultText === "Correct!"){  
-        }else{
-        }
     text(resultText, width / 2, height / 2);
     }
     textAlign(CENTER, TOP)
