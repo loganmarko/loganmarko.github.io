@@ -6,7 +6,7 @@
 
 let boat;
 let fish = [];
-let numFish = 45;
+let numFish = 50;
 let fishImages = {};
 let points = {
     blue: 1,
